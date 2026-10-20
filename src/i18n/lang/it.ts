@@ -19,7 +19,8 @@ export default {
   save: 'Salva',
   cancel: 'Annulla',
   wizardTitle: 'Collegamento del NAS',
-  wizardDescription: "Il computer si collega al NAS una sola volta con le credenziali dell'account, poi usa un certificato proprio",
+  wizardDescription:
+    "Il computer si collega al NAS una sola volta con le credenziali dell'account, poi usa un certificato proprio",
   stepAddress: 'Indirizzo',
   stepTrust: 'Verifica',
   stepAccount: 'Account',
@@ -29,7 +30,8 @@ export default {
   findNas: 'Cerca',
   testLink: 'Verifica',
   trustTitle: 'Certificato del NAS',
-  trustDescription: "L'impronta deve corrispondere a quella dell'autorità nei certificati del Centro sicurezza del NAS",
+  trustDescription:
+    "L'impronta deve corrispondere a quella dell'autorità nei certificati del Centro sicurezza del NAS",
   fingerprint: 'Impronta',
   trustConfirm: 'Conferma',
   username: 'Nome utente',
@@ -43,11 +45,13 @@ export default {
   searchAgain: 'Cerca di nuovo',
   searching: 'Ricerca in corso',
   noResults: 'Nessun NAS trovato',
-  noResultsDescription:'La ricerca richiede la stessa rete e il rilevamento in rete attivo nel Centro sicurezza',
+  noResultsDescription:
+    'La ricerca richiede la stessa rete e il rilevamento in rete attivo nel Centro sicurezza',
   select: 'Seleziona',
   configured: 'Configurato',
   setupRequired: 'Configurazione iniziale richiesta',
-  setupRequiredDescription:'Il NAS è stato rilevato correttamente. Per collegare questo computer e sincronizzare le cartelle, è necessario completare la configurazione iniziale nell’interfaccia web del NAS.',
+  setupRequiredDescription:
+    'Il NAS è stato rilevato correttamente. Per collegare questo computer e sincronizzare le cartelle, è necessario completare la configurazione iniziale nell’interfaccia web del NAS.',
   status_unconfigured: 'Nessun NAS collegato',
   status_paused: 'Sincronizzazione sospesa',
   status_disconnected: 'Non collegato',
@@ -60,7 +64,8 @@ export default {
   syncsDescription: 'Cartelle del computer mantenute allineate con il NAS',
   newSync: 'Nuova sincronizzazione',
   emptySyncsTitle: 'Nessuna cartella sincronizzata',
-  emptySyncsDescription:'Una sincronizzazione mantiene allineata una cartella del computer con una cartella del NAS',
+  emptySyncsDescription:
+    'Una sincronizzazione mantiene allineata una cartella del computer con una cartella del NAS',
   name: 'Nome',
   pcFolder: 'Cartella del computer',
   nasFolder: 'Cartella del NAS',

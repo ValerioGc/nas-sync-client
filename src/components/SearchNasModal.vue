@@ -26,7 +26,7 @@ async function submit() {
   if (busy.value) {
     return;
   }
-  
+
   busy.value = true;
   error.value = null;
   try {
