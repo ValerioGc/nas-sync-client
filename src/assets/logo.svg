@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="NAS Sync">
+  <rect width="128" height="128" rx="28" fill="#2470b8" />
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-width="11">
+    <path d="M34 64A30 30 0 0 1 82 40" />
+    <path d="M94 64A30 30 0 0 1 46 88" />
+  </g>
+  <g fill="#fff" stroke="#fff" stroke-linejoin="round" stroke-width="4">
+    <path d="M94 52 74 50 92 32Z" />
+    <path d="M34 76 54 78 36 96Z" />
+  </g>
+</svg>

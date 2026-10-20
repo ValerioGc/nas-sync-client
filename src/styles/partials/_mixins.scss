@@ -1,0 +1,27 @@
+@use './variables' as *;
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin surface($background: var(--surface), $radius: $radius_medium, $shadow: null) {
+  border: $border_width solid var(--border);
+  border-radius: $radius;
+  background: $background;
+
+  @if $shadow {
+    box-shadow: $shadow;
+  }
+}
+
+@mixin focus-ring {
+  outline: $focus_width solid var(--accent);
+  outline-offset: $space_1;
+}
+
+@mixin compact {
+  @media (max-width: $breakpoint_compact) {
+    @content;
+  }
+}

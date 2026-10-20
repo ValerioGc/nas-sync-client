@@ -1,0 +1,31 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main-window",
+  "description": "The client of the sync: link to the NAS, syncs, history and options.",
+  "windows": ["main"],
+  "permissions": [
+    "core:event:allow-listen",
+    "core:event:allow-unlisten",
+    "allow-get-state",
+    "allow-get-history",
+    "allow-default-name",
+    "allow-discover-nas",
+    "allow-probe-nas",
+    "allow-connect-nas",
+    "allow-move-nas",
+    "allow-disconnect-nas",
+    "allow-nas-folders",
+    "allow-pick-folder",
+    "allow-create-sync",
+    "allow-update-sync",
+    "allow-remove-sync",
+    "allow-set-paused",
+    "allow-save-preferences",
+    "allow-set-appearance",
+    "allow-quit-app",
+    "allow-minimize-window",
+    "allow-toggle-maximize-window",
+    "allow-close-window",
+    "allow-start-window-dragging"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "mini-window",
+  "description": "The summary of the tray: state, last files, pause and resume.",
+  "windows": ["mini"],
+  "permissions": [
+    "core:event:allow-listen",
+    "core:event:allow-unlisten",
+    "allow-get-state",
+    "allow-get-history",
+    "allow-set-paused",
+    "allow-open-main",
+    "allow-hide-mini",
+    "allow-quit-app"
+  ]
+}

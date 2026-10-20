@@ -1,0 +1,193 @@
+@use './partials/reset';
+@use './partials/variables' as *;
+@use './partials/placeholders' as *;
+@use './partials/mixins' as *;
+
+.icon {
+  @extend %icon_base;
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask: var(--icon_url) center / contain no-repeat;
+  mask: var(--icon_url) center / contain no-repeat;
+}
+
+body {
+  font-family: 'Segoe UI', Inter, system-ui, sans-serif;
+  font-size: $font_body;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app {
+  @extend %stack;
+}
+
+button,
+input {
+  font: inherit;
+  border-radius: $radius_small;
+}
+
+button {
+  cursor: pointer;
+  @extend %control_transition;
+  color: inherit;
+  background: transparent;
+  border: 0;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+:focus-visible {
+  @include focus-ring;
+}
+
+button:not(:disabled):hover {
+  background-color: var(--surface-hover);
+}
+
+input {
+  color: inherit;
+  background: var(--surface-soft);
+  border: $border_width solid var(--border);
+  padding: $space_2 $space_3;
+  min-height: $control_height;
+}
+
+input::placeholder {
+  color: var(--muted);
+  opacity: 0.75;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
+
+.primary_button {
+  @extend %button_base;
+  background: var(--accent-strong);
+  color: var(--on-accent);
+  font-weight: 600;
+}
+
+.primary_button:not(:disabled):hover {
+  background: var(--accent-strong);
+  filter: brightness(1.08);
+}
+
+.secondary_button {
+  @extend %button_base;
+  @include surface($radius: null);
+}
+
+.icon_button {
+  @extend %icon_button;
+  padding: 0;
+}
+
+.body_copy {
+  @extend %body_copy;
+}
+
+.hint {
+  @extend %hint;
+}
+
+.empty_state {
+  @extend %centered_stack;
+}
+
+.danger_button {
+  background: var(--danger-strong);
+}
+
+.danger_text {
+  color: var(--danger);
+}
+
+.modal_actions {
+  @extend %fx_row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: $space_2;
+  margin-top: $space_5;
+}
+
+.field {
+  @extend %stack;
+  gap: $space_2;
+  font-size: $font_small;
+  font-weight: 600;
+
+  input,
+  small {
+    font-weight: 400;
+  }
+}
+
+.error_message {
+  @extend %fx_row;
+  align-items: flex-start;
+  gap: $space_3;
+  padding: $space_4;
+  border: $border_width solid color-mix(in srgb, var(--danger) 24%, transparent);
+  border-inline-start: 3px solid var(--danger);
+  border-radius: $radius_medium;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: $font_control;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  margin-bottom: $space_4;
+
+  &::before {
+    @extend %icon_base;
+    content: '';
+    background-color: currentColor;
+    mask: url('@/assets/icons/warning.svg') center / contain no-repeat;
+    -webkit-mask: url('@/assets/icons/warning.svg') center / contain no-repeat;
+  }
+}
+
+.warning_message {
+  @extend .error_message;
+  border-color: color-mix(in srgb, var(--warning) 24%, transparent);
+  border-inline-start-color: var(--warning);
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.spinner {
+  @extend %icon_base;
+  display: inline-block;
+  border: $focus_width solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: $radius_round;
+  animation: sync_spin $duration_slow linear infinite;
+}
+
+@keyframes sync_spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+  }
+}
