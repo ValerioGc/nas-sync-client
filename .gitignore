@@ -45,3 +45,4 @@ Thumbs.db
 *.sw?
 
 /backend/binaries/
+pnpm-lock.yaml

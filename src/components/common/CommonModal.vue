@@ -47,7 +47,7 @@ onBeforeUnmount(() => {
         </button>
       </div>
 
-      <div class="modal_body"><slot></slot></div>
+      <div class="modal_body"><slot /></div>
     </dialog>
   </Teleport>
 </template>

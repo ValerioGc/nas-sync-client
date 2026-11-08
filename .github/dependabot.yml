@@ -10,6 +10,9 @@ updates:
     groups:
       npm:
         patterns: ['*']
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-patch']
 
   - package-ecosystem: cargo
     directory: /backend
@@ -19,6 +22,9 @@ updates:
     groups:
       cargo:
         patterns: ['*']
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-patch']
 
   - package-ecosystem: github-actions
     directory: /
@@ -27,3 +33,6 @@ updates:
     groups:
       actions:
         patterns: ['*']
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-patch']
