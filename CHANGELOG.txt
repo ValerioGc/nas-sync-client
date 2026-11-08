@@ -1,4 +1,10 @@
 # Changelog
 
+## [0.9.1]
+
+### Fixed
+
+- Update slot syntax for better compatibility.
+
 ## [0.9.0]
 - First release of the nas-sync-client
