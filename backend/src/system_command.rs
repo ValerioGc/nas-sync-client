@@ -7,6 +7,7 @@ use std::{
 
 const MAX_OUTPUT: u64 = 65536;
 
+/// A file avoids pipe backpressure and reader threads that could outlive a timeout.
 pub fn output(command: &mut Command, timeout: Duration) -> Option<Vec<u8>> {
     let mut capture = tempfile::NamedTempFile::new().ok()?;
     let stdout = capture.as_file().try_clone().ok()?;

@@ -40,4 +40,5 @@ cargo test --manifest-path backend/Cargo.toml --release --test glib_variant
 The Cargo override is declared in [`backend/Cargo.toml`](../../Cargo.toml).
 Retain it until the GTK/Tauri dependency chain can use a fixed upstream release.
 When replacing the backport, verify the actual dependency graph and rerun the
-release-mode regression test before removing the override.
+release-mode regression test before removing the override. nas-finder, nas-mobile and
+nas-sync-client carry the same copy, so a change goes to all three.

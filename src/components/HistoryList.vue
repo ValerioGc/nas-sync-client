@@ -58,7 +58,6 @@ function iconOf(entry: HistoryEntry) {
     </li>
   </ul>
 
-  <!-- Empty state -->
   <p v-else class="hint history_empty" data-testid="history_empty">{{ t('historyEmpty') }}</p>
 </template>
 
